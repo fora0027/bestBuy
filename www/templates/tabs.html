@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-tabs class="tabs-icon-top tabs-background-positive tabs-color-light tabs-color-active-light tabs-striped">
+
+        <!-- Dashboard Tab -->
+        <ion-tab title="Account" icon-off="ion-ios-person-outline" icon-on="ion-ios-person" href="#/tab/account">
+            <ion-nav-view name="tab-account"></ion-nav-view>
+        </ion-tab>
+        
+        <ion-tab title="Search" ng-if="isAuthenticated()" icon-off="ion-ios-search" icon-on="ion-ios-search-strong" href="#/tab/search">
+            <ion-nav-view name="tab-search"></ion-nav-view>
+        </ion-tab>
+
+
+        <ion-tab title="Stores" ng-if="isAuthenticated()" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/stores">
+            <ion-nav-view name="tab-stores"></ion-nav-view>
+        </ion-tab>
+
+
+        <ion-tab title="Logs" ng-if="isAuthenticated()" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/logs">
+            <ion-nav-view name="tab-logs"></ion-nav-view>
+        </ion-tab>
+
+    </ion-tabs>
+</ion-view>

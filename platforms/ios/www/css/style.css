@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+ion-list{
+    overflow: scroll;
+}
+.slideContainer{
+    text-align: center;
+}
+/*
+p{
+    width: 90%;
+    
+}
+*/
+.slideContainer{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 20px;
+}
+
+.slider {
+ overflow: visible;
+ display: table;
+}
+ion-slide {
+ padding-right: 5px;
+ padding-left: 5px;
+}
+ion-slide:first-child {
+ padding-left: 0;
+}
+ion-slide:last-child {
+ padding-right: 0;
+}
+ion-slide:nth-child(2) {
+ z-index: 1;
+} 
+

@@ -1,0 +1,22 @@
+<ion-view ng-controller="StoresCtrl" view-title="Stores">
+  <ion-content class="padding">
+    <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search for Stores by City" ng-model="data.search" value={{data.search}}>
+        </label>  
+        <button class="button button-clear" ng-click="search(data.search)">Search</button>
+    </div>
+      
+      <ion-list>
+        <ion-item ng-repeat="store in stores track by $index">
+            <p>{{store.name}}</p>
+            <p>{{store.address}}, {{store.city}}</p>
+            <p>{{store.hours}}</p>
+            <p>1-{{store.phone}}</p>
+            <a href="http://maps.google.com/maps?saddr={{store.lat}},{{store.lng}},q={{store.lat}},{{store.lng}}">Show on Map</a>
+        </ion-item>
+      </ion-list>
+  
+    </ion-content>
+</ion-view>

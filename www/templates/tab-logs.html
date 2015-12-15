@@ -1,0 +1,11 @@
+<ion-view view-title="Logs">
+  <ion-content ng-controller="LogsCtrl">
+
+<ion-list show-delete="false" can-swipe="true">
+       <ion-item ng-repeat="log in logs track by $index">
+ {{log[1]}}
+       <ion-option-button class="button-assertive ion-trash-b" ng-click="remove(log)"></ion-option-button>
+       </ion-item>
+     </ion-list>
+  </ion-content>
+</ion-view>
